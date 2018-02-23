@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Arc at Old Colony-房间详情-留学家-LiuXueJia</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/common/icon/ome.icon.linklogo.png">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/ome.style.css" />
+		<link rel="stylesheet" href="css/ome.style.dif.css" />
+	</head>
+
+	<body>
+
+		<header>
+			<nav>
+				<div class="ome-logo"></div>
+				<ul class="ome-menu">
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：未登录成功时的界面
+                    -->
+					<!--<li class="ome-head-img">
+                    	<img class="ome-nologin-img" src="img/common/icon/icon-nologin.png" />
+                    	登录
+                    </li>
+					<li>注册</li>
+					<li>帮助</li>   -->
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：登录成功后的代码
+                    -->
+					<li class="ome-head-img" onclick="OmeOpenUserPanel(this)" data-status="0">
+						<img src="img/common/modify/head.jpg" /> 大大怪小将军
+					</li>
+					<div class="ome-user-info" id="ome_user_info">
+						<li><a href="javascript:void(0)">个人中心</a></li>
+						<li>我的钱包</li>
+						<li>我的订单</li>
+						<li>我的收藏</li>
+						<li>我的房源</li>
+						<li>帮助</li>
+						<li>退出</li>
+					</div>
+				</ul>
+				<div class="ome-head-search">
+					<input placeholder="您想去哪里找留学生公寓呢？" onkeyup="javascript:OmeOpenSearchMind(this)" />
+					<button></button>
+					<div class="ome-search-mind" id="ome_head_search_mind">
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-noting">抱歉，没有搜索结果，请重新输入</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-city">城市</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约</li>
+							<li>头部北京</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-school">学校</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约大学</li>
+							<li>头部北京大学</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="ome-showmenu">
+					<li onclick="javascript:OmeOpenMenu()">≡</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="ome-container">
+			<div class="ome-noshaow-style-container ome-width-container">
+				<div class="ome-lot-noborder-box ome-width-seventy">
+					<span class="lanner-promot">共有四张图片</span>
+					<section class="ome-index-lanner">
+						<a href="javascript:OmeLannerLeftPage()" class="arrL"></a>
+						<a href="javascript:OmeLannerRightPage()" class="arrR"></a>
+						<ul id="ome_lanner" data-index="0">
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/common/modify/temp.jpg" />
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/common/modify/index.page.1.jpg" />
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/common/modify/伦敦.jpg" />
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									<img src="img/common/modify/index.page.1.jpg" />
+								</a>
+							</li>
+						</ul>
+						<div class="lanner-sequence" align="center">
+							<a href="javascript:OmeLannerMoveTo(0)" class="active"></a>
+							<a href="javascript:OmeLannerMoveTo(1)"></a>
+							<a href="javascript:OmeLannerMoveTo(2)"></a>
+							<a href="javascript:OmeLannerMoveTo(3)"></a>
+						</div>
+					</section>
+				</div>
+				<div class="ome-rob-noborder-box  ome-width-thirty" align="center">
+					<ul class="ome-ul-line ome-col-gray ome-width-ninety">
+						<h1 class="ome-online-title no-label">
+									<font>关键信息</font>
+						</h1>
+						<li class="photo-text-box" title="房东信息">
+							<img src="img/common/modify/head.jpg" />
+							<ins>孙兰东</ins>
+						</li>
+						<li class="icon-phone" title="联系方式：18258441009">182-5844-1009</li>
+						<li class="icon-city" title="地址：Near West Side街区, 芝加哥">Near West Side街区, 芝加哥</li>
+						<li class="icon-baoz">留学家liuxuejia.com品质认证</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="ome-noshaow-style-container ome-width-container">
+				<div class="ome-width-hundred" align="center">
+					<ul class="ome-ul-line ome-color-2 ome-width-hundred">
+						<h1 class="ome-online-title no-label">
+									<font>关于此房源</font>
+						</h1>
+						<li class="textindent noellispsis">
+							<p>从公寓步行到曼彻斯特都会大学和曼彻斯特大学不到15分钟。从公寓步行到曼彻斯特都会大学和曼彻斯特大学不到15分钟从公寓步行到曼彻斯特都会大学和曼彻斯特大学不到15分钟从公寓步行到曼彻斯特都会大学和曼彻斯特大学不到15分钟从公寓步行到曼彻斯特都会大学和曼彻斯特大学不到15分钟公寓周边交通便利，同学们可以方便地去牛津街上的餐厅酒吧吃饭，也可以到Northern Quarter区轻松购物。</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="ome-noshaow-style-container ome-width-container">
+				<div class="ome-lot-noborder-box ome-color-2 ome-width-seventy">
+					<h1 class="ome-online-title no-label">
+						<font>基本信息</font>
+					</h1>
+					<dl class="home-basic-info ome-col-2 ome-width-border-hundred">
+						<dt>房源类型：公寓</dt>
+						<dt>卧室数量：1</dt>
+						<dt>面积：15m</dt>
+						<dt>押金金额：300.00</dt>
+						<dt>卫浴数量：1</dt>
+						<dt>车位数量：1</dt>
+					</dl>
+					<h1 class="ome-online-title no-label">
+						<font>便利设施</font>
+					</h1>
+					<dl class="home-facilitate-info ome-col-2 ome-width-border-hundred">
+						<dt class="icon-nuanqi">暖气</dt>
+						<dt class="icon-woshi">卧室数量：1</dt>
+						<dt class="icon-mianji">面积：15m</dt>
+						<dt class="icon-yajin">押金金额：300.00</dt>
+						<dt class="icon-weiyu">卫浴数量：1</dt>
+						<dt class="icon-chewei">车位数量：1</dt>
+					</dl>
+					<h1 class="ome-online-title no-label">
+									<font>注意事项</font>
+						</h1>
+					<ul class="ome-ul-line ome-color-2 ome-width-hundred">
+						<li class="textindent noellispsis">
+							<p>从公寓步行到曼彻斯特都会大学和曼彻斯特大学不到15分钟从公寓步行到曼彻斯特都会大学和曼彻斯特大学不到15分钟从公寓步行到曼彻斯特都会大学和曼彻斯特大学不到15分钟从公寓步行到曼彻斯特都会大学和曼彻斯特大学不到15分钟公寓周边交通便利，同学们可以方便地去牛津街上的餐厅酒吧吃饭，也可以到Northern Quarter区轻松购物。</p>
+						</li>
+					</ul>
+
+					<div class="ome-noshaow-style-container ome-width-hundred home-detail-openmap">
+						<a class="home-detail-openmap-text">
+							<font>点击打开地图</font>
+						</a>
+					</div>
+				</div>
+
+				<div class="ome-rob-noborder-box  ome-width-thirty" align="center">
+					<ul class="ome-ul-line ome-color-3 ome-col-gray ome-width-ninety home-deteil-zb">
+						<h1 class="icon-zb">
+									<font>该房源周边学校</font>
+							<a>更多》</a>
+						</h1>
+						<a class="ome-color-3" href="forget.password.html">
+							<li class="home-detail-zbimg">
+								<img src="img/common/modify/波士顿.jpg">
+							</li>
+							<li class="home-detail-zbtitle">
+								伦敦国王学校
+							</li>
+							<li class="home-detail-zbtitle">
+								King's College London
+							</li>
+							<li>
+								距离该房源【954】米
+							</li>
+							<li class="noellispsis">
+								全国排名：伦敦大学的创校学院之一，英国著名高等学府
+							</li>
+						</a>
+					</ul>
+
+					<ul class="ome-ul-line ome-color-3 ome-top-bigsmall ome-col-gray ome-width-ninety home-deteil-zb">
+
+						<h1 class="icon-zb">
+							<font>该房源周边房源</font>
+							<a>更多》</a>
+						</h1>
+						<a class="ome-color-3" href="javascript:alert(0)">
+							<li class="home-detail-zbimg">
+								<img src="img/common/modify/波士顿.jpg">
+							</li>
+							<li class="home-detail-zbtitle">
+								Dashwood Studios
+							</li>
+							<li class="home-detail-zbtitle">
+								人民币：<b class="ome-col-red">$666.0/月</b>
+							</li>
+							<li>
+								距离该房源【293】米
+							</li>
+						</a>
+					</ul>
+
+				</div>
+			</div>
+
+			<div class="ome-noshaow-style-container ome-width-container">
+				<div class="ome-width-hundred" align="center">
+					<ul class="ome-ul-line ome-color-2 ome-width-hundred">
+						<h1 class="icon-finduser">
+							<font>找室友</font>
+						</h1>
+						<li class="home-detail-fu-all">
+							目前有85人正在找合租室友 <a class="ome-left-small ome-col-red">换一批</a>
+						</li>
+						<li>
+							<dl class="home-detail-roommate ome-col-8 ome-width-border-hundred">
+								<dt onclick="HdmOpen('用户名字')">
+									<img src="img/common/modify/head.jpg" title="大大怪小将军">
+									<p>大大怪小将军</p>
+								</dt>
+								<dt onclick="HdmOpen('用户名字')">
+									<img src="img/common/modify/head.jpg">
+									<p>大大怪小将军</p>
+								</dt>
+								<dt onclick="HdmOpen('用户名字')">
+									<img src="img/common/modify/head.jpg">
+									<p>大大怪小将军</p>
+								</dt>
+								<dt onclick="HdmOpen('用户名字')">
+									<img src="img/common/modify/head.jpg">
+									<p>大大怪小将军大大怪小将军</p>
+								</dt>
+								<dt>
+									<button class="ome-button-style-common btn-error ome-width-ninety">我要找室友</button>
+								</dt>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="ome-noshaow-style-container ome-width-container">
+				<h1 class="ome-online-title no-label">
+						<font>精彩评论</font>
+					</h1>
+				<ul class='ome-ul-line ome-title-content user-title-content'>
+					<!--<li class='icon-noting'>暂时没有任何留言</li>-->
+					<li class="ome-message-read">
+						<h1>孙兰东</h1>
+						<div class="user-other-message">
+							<a href="javascript:alert('跳转到用户孙兰东的个人主页')"><img src="img/common/modify/index.page.1.jpg" /></a>
+							<div class="message-content">
+								<font>你好</font>
+								<label>2016-04-22 10:47</label>
+							</div>
+						</div>
+						<div class="user-my-message">
+							<img src="img/common/modify/head.jpg" />
+							<div class="message-content">
+								<font>房东回复</font>
+								<label>2016-04-22 10:47</label>
+							</div>
+						</div>
+					</li>
+					<li class="ome-message-unread">
+						<h1>who am i</h1>
+						<div class="user-other-message">
+							<a href="javascript:alert('跳转到用户who am i的个人主页')"><img src="img/common/modify/伦敦.jpg" /></a>
+							<div class="message-content">
+								<font>容填充内容填充内容填充内容填充内容填充内容填充</font>
+								<label>2016-04-22 10:47</label>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!---->
+				<form class="ome-form home-detail-plbox">
+
+					<textarea placeholder="请输入评论内容" required="required" class="ome-textarea-style-common ome-width-hundred"></textarea>
+					<button class="ome-button-style-common btn-error ome-width-twenty ome-top-bigsmall" type="submit">提交评论</button>
+					<font class="ome-color-2 ome-left-small">您还可以输入<b class="ome-col-red">200</b>个字</font>
+				</form>
+
+				<div class="home-detail-plbox-wdl">
+					<p class="ome-color-2">评价</p>
+					<div>
+						<font class="ome-col-gray">你需要先登录才能发表评价。<a href="login.html" class="ome-col-red">立即登录</a></font>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<footer>
+			<ul class="ome-footer-title">
+				<li><a href="javascript:void(0)">关于我们</a></li>
+				<li><a href="javascript:void(0)">合作伙伴</a></li>
+				<li><a href="javascript:void(0)">商务合作</a></li>
+				<li><a href="javascript:void(0)">联系我们</a></li>
+				<li><a href="javascript:void(0)">加入我们</a></li>
+				<li><a href="javascript:void(0)">服务声明</a></li>
+			</ul>
+			<ul class="ome-footer-usonline">
+				<li>
+					<img class="usonline-icon usonline-wb" src="img/common/icon/ome.icon.wb.png" />
+				</li>
+				<li>
+					<img class="usonline-icon usonline-wx" src="img/common/icon/ome.icon.wx.png" />
+				</li>
+				<li>
+					<img class="usonline-icon  usonline-twitter" src="img/common/icon/ome.icon.twitter.png" />
+				</li>
+			</ul>
+			<p>©2016 留学家 All rights reserved | 京ICP备15000232</p>
+			<p>©2016 Liuxuejia.com All rights reserved</p>
+		</footer>
+
+		<div class="ome-overlap">
+		</div>
+		<div class="ome-prompt-box home-detail-message">
+			<div class="hdm-title">
+				<font class="icon-message">给<b class="ome-col-red" id="home-detail-mun">大大怪小将军</b>留言</font>
+				<label onclick="HdmColse()">x</label>
+			</div>
+			<form class="ome-form">
+				<textarea placeholder="请输入留言内容" required="required" class="ome-textarea-style-common ome-width-border-hundred"></textarea>
+				<button class="ome-button-style-common btn-error ome-width-twenty" type="submit">确认留言</button>
+				<font class="ome-color-2 ome-left-small">您还可以输入<b class="ome-col-red">200</b>个字</font>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/ome.style.1.0.js"></script>
+	<script type="text/javascript" src="js/home.detail.js"></script>
+
+</html>

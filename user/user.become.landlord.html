@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>申请成为房东-大大怪小将军-留学家-LiuXueJia</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../img/common/icon/ome.icon.linklogo.png">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" />-->
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/ome.style.css" />
+		<link rel="stylesheet" href="../css/ome.style.dif.css" />
+	</head>
+
+	<body>
+
+		<header>
+			<nav>
+				<div class="ome-logo"></div>
+				<ul class="ome-menu">
+					<li class="ome-head-img" onclick="OmeOpenUserPanel(this)" data-status="0">
+						<img src="../img/common/modify/head.jpg" /> 大大怪小将军
+					</li>
+					<div class="ome-user-info" id="ome_user_info">
+						<li><a href="javascript:void(0)">个人中心</a></li>
+						<li>我的钱包</li>
+						<li>我的订单</li>
+						<li>我的收藏</li>
+						<li>我的房源</li>
+						<li>帮助</li>
+						<li>退出</li>
+					</div>
+				</ul>
+				<div class="ome-head-search">
+					<input placeholder="您想去哪里找留学生公寓呢？" onkeyup="javascript:OmeOpenSearchMind(this)" />
+					<button></button>
+					<div class="ome-search-mind" id="ome_head_search_mind">
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-noting">抱歉，没有搜索结果，请重新输入</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-city">城市</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约</li>
+							<li>头部北京</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-school">学校</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约大学</li>
+							<li>头部北京大学</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="ome-showmenu">
+					<li onclick="javascript:OmeOpenMenu()">≡</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="ome-container">
+
+			<div class="ome-noshaow-style-container ome-width-container">
+				<h1 class="ome-online-title no-label">
+						<font>申请成为房东</font>
+				</h1>
+			</div>
+
+			<div class="ome-noshaow-style-container ome-width-container">
+				<div class="ome-lot-noborder-box ome-width-thirty bl-fdrzlogo" align="center">
+					<img src="../img/common/icon/ome.icon.fdrz.png" />
+					<p>用户发布房源信息真实身份确认</p>
+					<p>认证成功即可终身免费发布房源信息</p>
+					<p>
+						<b class="ome-col-red">留学家</b>为您实现闲置房源的有效利用
+					</p>
+					<font>
+						特别提醒：每个帐号对应一个身份信息，相同身份信息提交多个帐号申请将只通过其中一个
+					</font>
+				</div>
+
+				<div class="ome-rob-noborder-box ome-width-seventy" align="center">
+					<form class="ome-form ome-width-eighty">
+						<ul class="ome-ul-form ome-col-gray">
+							<li class="ome-promt-big ome-top-small">基本信息<b class="ome-col-red">*</b></li>
+							<li class="ome-promt ome-top-bigsmall">姓名</li>	
+							<li>
+								<input type="text" class="ome-input-style-common ome-width-fifty" placeholder="请输入姓名" />
+							</li>
+							<li class="ome-promt ome-top-bigsmall">
+								自我介绍(您还可以输入<b class="ome-col-red">200</b>个字)
+							</li>
+							<li class="urh-textarea">
+								<textarea placeholder="请输入自我介绍" required="required" class="ome-textarea-style-common ome-width-border-hundred"></textarea>
+							</li>
+							<li class="ome-promt-big ome-top-small">擅长语言<b class="ome-col-red">*</b></li>
+							<li class="bl-radio">
+								<dl class="ome-col-3 ome-width-border-hundred">
+								<dt><input name="language" type="radio" checked="checked" value="" /><font>中文</font></dt>
+								<dt><input name="language" type="radio" value="" /><font>英文</font></dt>
+								<dt><input name="language" type="radio" value="" />
+									<input type="text" class="ome-input-style-common ome-width-fifty" placeholder="其它" />
+								</dt>
+								</dl>
+							</li>
+
+							<li class="ome-promt-big">个人证件(选填)</li>
+							<li class="ome-promt noellispsis ome-top-bigsmall">
+								上传个人证件仅作为房源认证使用，留学家承诺绝不外泄，若选择不上传个人证件，您的房源将会显示“未认证”标注。
+							</li>
+
+							<li class="ome-promt ome-top-small">
+								请选择证件类型<b class="ome-col-red">*</b>
+							</li>
+
+							<li class="bl-radio">
+								<dl class="ome-col-4 ome-width-border-hundred">
+								<dt><input name="certificates" type="radio" checked="checked" value="" /><font>驾照</font></dt>
+								<dt><input name="certificates" type="radio" value="" /><font>护照</font></dt>
+								<dt><input name="certificates" type="radio" value="" /><font>学生证</font></dt>
+								<dt><input name="certificates" type="radio" value="" /><font>其它</font></dt>
+								</dl>
+							</li>
+							<li class="ome-promt">
+								请上传您的证件照片（可以显示个人基本信息即可）
+							</li>
+							<li class="bl-addphoto" id="bl_addphoto">
+									<div class="bl-photo">
+										<h1>
+										   <font>$@~2Z(`H@NYSJ_E]SM0R2KK.jpg</font>
+										   <a href="javascript:void(0)" class="icon-del" title="删除"></a>
+										</h1>
+										<img src="../img/common/modify/index.page.1.jpg" />
+									</div>
+									<div class="bl-photo">
+										<h1>
+										   <font>$@~2Z(`H@NYSJ_E]SM0R2KK.jpg</font>
+										   <a href="javascript:void(0)" class="icon-del" title="删除"></a>
+										</h1>
+										<img src="../img/common/modify/temp.jpg" />
+									</div>
+							</li>
+							
+							<li class="bl-addphoto">
+								<div class="bl-file">
+									<font>添加图片</font>
+									<input type="file" id="file" class="user-face-update" title="点击添加图片"/>
+								</div>
+							</li>
+							
+							<li class="ome-top-bigsmall">
+									<button class="ome-button-style-common btn-waring ome-width-forty" type="submit">提交</button>
+								</li>
+							
+						</ul>
+					</form>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<footer>
+			<ul class="ome-footer-title">
+				<li><a href="javascript:void(0)">关于我们</a></li>
+				<li><a href="javascript:void(0)">合作伙伴</a></li>
+				<li><a href="javascript:void(0)">商务合作</a></li>
+				<li><a href="javascript:void(0)">联系我们</a></li>
+				<li><a href="javascript:void(0)">加入我们</a></li>
+				<li><a href="javascript:void(0)">服务声明</a></li>
+			</ul>
+			<ul class="ome-footer-usonline">
+				<li>
+					<img class="usonline-icon usonline-wb" src="../img/common/icon/ome.icon.wb.png" />
+				</li>
+				<li>
+					<img class="usonline-icon usonline-wx" src="../img/common/icon/ome.icon.wx.png" />
+				</li>
+				<li>
+					<img class="usonline-icon  usonline-twitter" src="../img/common/icon/ome.icon.twitter.png" />
+				</li>
+			</ul>
+			<p>©2016 留学家 All rights reserved | 京ICP备15000232</p>
+			<p>©2016 Liuxuejia.com All rights reserved</p>
+		</footer>
+		<div class="ome-overlap">
+		</div>
+		<div class="ome-prompt-box ome-confirm-box" id="ome_del_photo">
+			<h1 class="confirm-title">删除照片</h1>
+			<p class="confirm-content">你确定删除这张照片吗</p>
+			<div class="confirm-button">
+				<button class="ome-button-style-common btn-primary ome-width-thirty" onclick="confirmClose()" type="button">取消</button>
+				<button class="ome-button-style-common btn-error ome-width-thirty" onclick="confirmDel()" type="button">确认</button>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../js/ome.style.1.0.js"></script>
+	<script src="../js/ome.add.photo.js" type="text/javascript"></script> 
+</html>

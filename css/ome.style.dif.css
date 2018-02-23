@@ -1,0 +1,678 @@
+/* 
+* @Author: J1en
+* @Date:   2016-03-29 16:55:54
+* @Last Modified by:   J1en
+* @Last Modified time: 2016-03-29 16:55:54
+* 目前响应式支持三种规格   (小于450为手机)  (屏幕宽度大于450 和小于768)  大于768为电脑屏幕
+*/
+
+
+/*屏幕最小为768*/
+
+@media screen and (min-width: 768px) {
+	/*屏幕最大宽度500px  用的css样式*/
+	html,
+	body {
+		size: 10px;
+		font-size: 10px;
+	}
+	header {
+		height: 60px;
+	}
+	header .ome-logo {
+		width: 85px;
+		height: 30px;
+		margin-top: 15px;
+		margin-left: 8.5%;
+	}
+	header .ome-menu {
+		margin-right: 8.5%;
+		width: auto;
+		float: right;
+	}
+	header .ome-menu li {
+		width: auto;
+		height: 60px;
+		padding: 0px 15px;
+		line-height: 60px;
+		vertical-align: middle;
+	}
+	header ul.ome-menu li img {
+		float: left;
+		width: 50px;
+		height: 50px;
+		margin: 5px;
+		border-radius: 30px;
+	}
+	div.ome-user-info {
+		position: fixed;
+		display: none;
+		top: 72px;
+		float: right;
+		right: 8.5%;
+		background: rgba(37, 37, 53, .8);
+		width: 150px;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+		height: auto;
+	}
+	div.ome-user-info:before {
+		position: absolute;
+		content: "";
+		left: calc(50% - 8px);
+		top: -12px;
+		border-bottom: 12px solid rgba(37, 37, 53, .8);
+		border-right: 8px solid transparent;
+		border-left: 8px solid transparent;
+	}
+	div.ome-user-info li {
+		border-top: 1px solid rgba(37, 37, 53, .2);
+		width: 100% !important;
+		height: auto !important;
+		line-height: 2em !important;
+		padding: 5px 0px !important;
+	}
+	header .ome-showmenu {
+		display: none;
+	}
+	img.ome-nologin-img {
+		display: none;
+	}
+	header .ome-head-search {
+		height: auto;
+		margin-top: 14px;
+		margin-right: 20px;
+	}
+	.ome-head-search button {
+		height: 32px;
+	}
+	.ome-jumbotron {
+		height: 90%;
+	}
+	.ome-jumbotron h1 {
+		top: 40%;
+		left: 0%;
+	}
+	.ome-jumbotron p {
+		top: 42%;
+		left: 0%;
+	}
+	.ome-jumbotron-input-bg {
+		width: 50%;
+		left: 25%;
+		top: 45%;
+	}
+	.ome-index-search-input {
+		width: calc(70% - 40px);
+	}
+	.ome-index-search-btn {
+		width: calc(30% - 20px);
+		margin-left: 10px;
+	}
+	.ome-index-tran-png img {
+		width: 80px;
+	}
+	.ome-index-tran-png {
+		height: 68px;
+		top: -34px;
+	}
+	.ome-index-container ul li {
+		width: 33.3%;
+	}
+	.ome-index-container ul a {
+		width: 200px;
+	}
+	.ome-index-container ul img {
+		width: 200px;
+		height: 200px;
+	}
+	.ome-index-intro ul li {
+		width: 25%;
+	}
+	.ome-index-lanner {
+		height: 450px;
+	}
+	.ome-index-lanner ul {
+		height: 450px;
+	}
+	a.arrL,
+	a.arrR {
+		top: 204px;
+	}
+	ul.ome-footer-title {
+		width: 50%;
+		margin-left: 25%;
+	}
+	ul.ome-footer-usonline {
+		width: 30%;
+		margin-left: 35%;
+	}
+	section.ome-container {
+		margin-top: 60px;
+	}
+	div.ome-login-reg {
+		width: 50%;
+		margin-left: 25%;
+	}
+	div.ome-form-div {
+		width: 60%;
+	}
+	div.ome-other-signin {
+		padding: 0 20px;
+		width: calc(40% - 61px);
+	}
+	div.ome-width-container {
+		width: 86%;
+		left: 7%;
+	}
+	.user-head-box {
+		width: 26%;
+	}
+	.user-info-box {
+		width: calc(74% - 1px);
+	}
+	.user-menu-warp {
+		width: 26%;
+	}
+	.user-content-warp {
+		width: calc(74% - 1px);
+	}
+	ul.menu-warp li {
+		border-bottom: #E8EDF0 solid 1px;
+	}
+	ul.menu-warp li.active {
+		width: calc(100% - 4px);
+		border-left: 4px rgb(220, 70, 20) solid;
+	}
+}
+
+@media screen and (min-width : 450px) and (max-width : 768px) {
+	html,
+	body {
+		size: 8px;
+		font-size: 8px;
+	}
+	header {
+		height: 50px;
+	}
+	header .ome-logo {
+		width: 85px;
+		height: 30px;
+		margin-top: 10px;
+		margin-left: 8%;
+	}
+	header .ome-menu {
+		margin-right: 8%;
+		width: auto;
+		float: right;
+	}
+	header .ome-showmenu {
+		display: none;
+	}
+	header .ome-head-search {
+		height: auto;
+		margin-top: 12px;
+		margin-right: 20px;
+	}
+	.ome-head-search button {
+		height: 28px;
+	}
+	header .ome-menu li {
+		width: auto;
+		height: 50px;
+		padding: 0px 12px;
+		line-height: 50px;
+	}
+	img.ome-nologin-img {
+		display: none;
+	}
+	header ul.ome-menu li img {
+		float: left;
+		width: 40px;
+		height: 40px;
+		margin: 5px;
+		border-radius: 20px;
+	}
+	div.ome-user-info {
+		position: fixed;
+		display: none;
+		top: 62px;
+		float: right;
+		right: 8%;
+		background: rgba(37, 37, 53, .8);
+		box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+		width: 120px;
+		height: auto;
+	}
+	div.ome-user-info:before {
+		position: absolute;
+		content: "";
+		left: calc(50% - 8px);
+		top: -12px;
+		border-bottom: 12px solid rgba(37, 37, 53, .8);
+		border-right: 8px solid transparent;
+		border-left: 8px solid transparent;
+	}
+	div.ome-user-info li {
+		border-top: 1px solid rgba(37, 37, 53, .2);
+		width: 100% !important;
+		height: auto !important;
+		line-height: 2em !important;
+		padding: 5px 0px !important;
+	}
+	.ome-jumbotron {
+		height: 70%;
+	}
+	.ome-jumbotron h1 {
+		top: 50%;
+		left: 0%;
+	}
+	.ome-jumbotron p {
+		top: 52%;
+		left: 0%;
+	}
+	.ome-jumbotron-input-bg {
+		width: 80%;
+		left: 10%;
+		top: 55%;
+	}
+	.ome-index-search-input {
+		width: calc(70% - 40px);
+	}
+	.ome-index-search-btn {
+		width: calc(30% - 20px);
+		margin-left: 10px;
+	}
+	.ome-index-tran-png img {
+		width: 60px;
+	}
+	.ome-index-tran-png {
+		height: 51px;
+		top: -25.5px;
+	}
+	.ome-index-container ul li {
+		width: 50%;
+	}
+	.ome-index-container ul a {
+		width: 180px;
+	}
+	.ome-index-container ul img {
+		width: 180px;
+		height: 180px;
+	}
+	.ome-index-intro ul li {
+		width: 50%;
+	}
+	.ome-index-lanner {
+		height: 300px;
+	}
+	.ome-index-lanner ul {
+		height: 300px;
+	}
+	a.arrL,
+	a.arrR {
+		top: 129px;
+	}
+	ul.ome-footer-title {
+		width: 80%;
+		margin-left: 10%;
+		font-size: 1.0em;
+	}
+	ul.ome-footer-usonline {
+		width: 40%;
+		margin-left: 30%;
+	}
+	section.ome-container {
+		margin-top: 50px;
+	}
+	div.ome-login-reg {
+		width: 80%;
+		margin-left: 10%;
+	}
+	div.ome-form-div {
+		width: 60%;
+	}
+	div.ome-other-signin {
+		padding: 0 20px;
+		width: calc(40% - 61px);
+	}
+	div.ome-width-container {
+		width: 90%;
+		left: 5%;
+	}
+	.user-head-box {
+		width: 30%;
+	}
+	.user-info-box {
+		width: calc(70% - 1px);
+	}
+	.user-menu-warp {
+		width: 26%;
+	}
+	.user-content-warp {
+		width: calc(74% - 1px);
+		border-left: #E8EDF0 solid 1px;
+	}
+	ul.menu-warp li {
+		border-bottom: #E8EDF0 solid 1px;
+	}
+	ul.menu-warp li.active {
+		width: calc(100% - 3px);
+		border-left: 4px rgb(220, 70, 20) solid;
+	}
+	dl.home-detail-roommate dt {
+		text-align: center;
+		width: 12.5%;
+		margin-top: 0.6em
+	}
+	dl.home-detail-roommate dt {
+		width: 20%;
+	}
+	div.ome-prompt-box {
+		left: 20%;
+		width: 60%;
+	}
+	li.bl-radio label {
+		margin-left: 0.5em;
+	}
+	li.bl-radio label font {
+		text-indent: 0.5em;
+	}
+	li.bl-radio input[type="text"] {
+		margin-left: 0.5em;
+	}
+	li.urh-li-2{
+		display: flex;
+	}
+	li.urh-li-2 font{
+		line-height: 34px;
+	}
+}
+
+@media screen and (max-width : 450px) {
+	html,
+	body {
+		size: 6px;
+		font-size: 6px;
+	}
+	header {
+		height: 50px;
+		background-color: rgba(50, 150, 210, 1) !important;
+		/*box-shadow: 0 0 4px rgba(0,0,0,1);*/
+	}
+	header .ome-logo {
+		width: 85px;
+		height: 30px;
+		margin-top: 10px;
+		margin-left: 36%;
+		/*针对垃圾UC浏览器*/
+		margin-left: calc(50% - 42.5px);
+		margin-left: -moz-calc(50% - 42.5px);
+		margin-left: -webkit-calc(50% - 42.5px);
+	}
+	header .ome-head-search {
+		display: none !important;
+	}
+	header .ome-showmenu {
+		float: left;
+		width: auto;
+	}
+	header .ome-showmenu li {
+		width: auto;
+		height: 50px;
+		padding: 0px 15px;
+		line-height: 50px;
+		font-size: 5em;
+	}
+	header .ome-menu {
+		position: fixed;
+		width: 50%;
+		height: calc(100% - 50px);
+		top: 50px;
+		left: -100%;
+		background-color: rgba(50, 150, 210, 1);
+		-webkit-transition: left 0.2s ease-out;
+		-o-transition: left 0.2s ease-out;
+		-moz-transition: left 0.2s ease-out;
+		transition: left 0.2s ease-out;
+	}
+	header .ome-menu li {
+		width: 100%;
+		height: auto;
+		font-size: 2em;
+		padding: 15px 0px;
+		border-top: rgba(0, 0, 0, .1) 1px solid;
+		vertical-align: middle;
+	}
+	div.ome-user-info {
+		display: block !important;
+	}
+	header .ome-menu li.ome-head-img {
+		line-height: 100px;
+		text-align: left;
+		padding: 0px 0px;
+		font-weight: 600;
+		background-image: url(common/modify/index.page.1.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		box-shadow: 0 0 1000px rgba(0, 0, 0, .5) inset;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	header .ome-menu li:last-child {
+		border-bottom: rgba(0, 0, 0, .1) 1px solid;
+	}
+	header .ome-menu li:nth-child(1) {
+		border-bottom: rgba(0, 0, 0, .1) 1px solid;
+	}
+	header ul.ome-menu li img {
+		float: left;
+		width: 80px;
+		height: 80px;
+		margin: 10px;
+		border-radius: 100%;
+	}
+	.ome-jumbotron {
+		height: 60%;
+	}
+	.ome-jumbotron h1 {
+		top: 40%;
+		left: 0%;
+	}
+	.ome-jumbotron p {
+		top: 42%;
+		left: 0%;
+	}
+	.ome-jumbotron-input-bg {
+		width: 80%;
+		left: 10%;
+		top: 45%;
+	}
+	.ome-index-search-input {
+		width: 80%;
+		/*针对垃圾UC浏览器*/
+		width: calc(100% - 50px);
+	}
+	.ome-index-search-btn {
+		margin-left: 10px;
+		width: 90%;
+		/*针对垃圾UC浏览器*/
+		width: calc(100% - 20px);
+	}
+	.ome-index-tran-png img {
+		width: 60px;
+	}
+	.ome-index-tran-png {
+		height: 51px;
+		top: -25.5px;
+	}
+	.ome-index-container ul li {
+		width: 100%;
+	}
+	.ome-index-container ul li:nth-child(4),
+	.ome-index-container ul li:nth-child(5),
+	.ome-index-container ul li:nth-child(6) {
+		display: none;
+		/*手机隐藏3个*/
+	}
+	.ome-index-container ul a {
+		width: 100%;
+	}
+	.ome-index-container ul img {
+		border-radius: 0px;
+		width: 100%;
+		height: 200px;
+	}
+	.ome-index-container ul img:hover {
+		transform: rotateZ(0deg);
+	}
+	.ome-index-intro ul li {
+		width: 100%;
+	}
+	.ome-index-lanner {
+		height: 200px;
+	}
+	.ome-index-lanner ul {
+		height: 200px;
+	}
+	a.arrL,
+	a.arrR {
+		top: 79px;
+	}
+	ul.ome-footer-title {
+		width: 100%;
+	}
+	ul.ome-footer-usonline {
+		width: 60%;
+		margin-left: 20%;
+	}
+	section.ome-container {
+		margin-top: 50px;
+	}
+	div.ome-login-reg {
+		width: 100%;
+		margin-left: 0%;
+		box-shadow: 0px 0px 0 rgba(0, 0, 0, 0);
+		background-color: #FAFAFA;
+	}
+	div.ome-form-div {
+		width: 100%;
+	}
+	div.ome-other-signin {
+		width: 100%;
+	}
+	div.ome-width-container {
+		width: 100%;
+	}
+	div.ome-style-container {
+		background: #FAFAFA;
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		margin-top: 0;
+	}
+	.user-head-box {
+		background-image: url(common/modify/index.page.1.jpg);
+		background-size: cover;
+		width: 100%;
+		padding-bottom: 1.5em;
+	}
+	img.user-face {
+		margin-left: 34%;
+		margin-left: calc(50% - 45px);
+	}
+	input.user-face-update {
+		margin-left: 34%;
+		margin-left: calc(50% - 45px);
+	}
+	h1.user-name {
+		color: #FFF;
+		font-size: 2.5em !important;
+	}
+	p.user-one {
+		color: #FFF;
+	}
+	.user-info-box {
+		width: 100%;
+		border-right-width: 0px;
+	}
+	.user-menu-warp {
+		width: 100%;
+	}
+	.user-content-warp {
+		width: 100%;
+		height: auto;
+	}
+	ul.menu-warp li {
+		width: 50% !important;
+		padding:12px 0 !important;
+	}
+	ul.menu-warp li.active {
+		border-top: 4px rgb(220, 70, 20) solid;
+		padding-top:8px !important;
+	}
+	ul.user-title-content .icon-noting:before {
+		left: 30%;
+		left: calc(50% - 7.5em);
+	}
+	.ome-lot-box {
+		width: 100% !important;
+		border-right-width: 0px;
+	}
+	.ome-rob-box {
+		width: 100% !important;
+		border-left-width: 0px;
+	}
+	.ome-rob-noborder-box {
+		width: 100% !important;
+	}
+	.ome-lot-noborder-box {
+		width: 100% !important;
+	}
+	ul.home-switch {
+		width: 90%;
+	}
+	ul.home-switch li {
+		width: 50%;
+	}
+	.home-search-box img.homes-img {
+		width: 100%;
+	}
+	.home-search-box div.homes-content {
+		width: 100%;
+	}
+	dl.home-detail-roommate dt {
+		width: 25%;
+	}
+	div.ome-prompt-box {
+		left: 10%;
+		width: 80%;
+	}
+	li.bl-radio label {
+		margin-left: 0.5em;
+	}
+	li.bl-radio label font {
+		text-indent: 0.5em;
+	}
+	li.bl-radio input[type="text"] {
+		margin-left: 0.5em;
+	}
+	li.bl-addphoto div {
+		width: 98%;
+		height: 12em;
+		margin-top: 0.2em;
+	}
+	li.bl-addphoto div:nth-child(n+2) {
+		margin-left: 0;
+	}
+	li.bl-addphoto div.bl-photo h1{
+		width: 98%;
+	}
+	div.urh-content-minheight{
+		min-height: 100px !important;
+	}
+	li.urh-li-2{
+		display: flex;
+	}
+	li.urh-li-2 font{
+		line-height: 34px;
+	}
+}

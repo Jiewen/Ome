@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>手机停机-留学家-LiuXueJia</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/common/icon/ome.icon.linklogo.png">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/ome.style.css" />
+		<link rel="stylesheet" href="css/ome.style.dif.css" />
+	</head>
+
+	<body>
+
+		<header>
+			<nav>
+				<div class="ome-logo"></div>
+				<ul class="ome-menu">
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：未登录成功时的界面
+                    -->
+					<li class="ome-head-img">
+                    	<img class="ome-nologin-img" src="img/common/icon/icon-nologin.png" />
+                    	<a href="login.html">登录</a>
+                    </li>
+					<li><a href="reg.html">注册</a></li>
+					<li>帮助</li>   
+				</ul>
+				<div class="ome-head-search">
+					<input placeholder="您想去哪里找留学生公寓呢？" onkeyup="javascript:OmeOpenSearchMind(this)" />
+					<button></button>
+					<div class="ome-search-mind" id="ome_head_search_mind">
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-noting">抱歉，没有搜索结果，请重新输入</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-city">城市</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约</li>
+							<li>头部北京</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-school">学校</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约大学</li>
+							<li>头部北京大学</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="ome-showmenu">
+					<li onclick="javascript:OmeOpenMenu()">≡</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="ome-container">
+
+			<div class="ome-login-reg">
+				<div class="ome-login-reg-container">
+					<h1 class="ome-online-title">
+						<font>手机停机</font>
+					</h1>
+					<form class="ome-form">
+						<ul class="ome-ul-form ome-col-gray">
+
+							<li class="ome-promt ome-top-small">手机号码</li>
+							<li>
+								<input class="ome-input-style-common ome-width-border-hundred" placeholder="请输入手机号码" required="required" />
+							</li>
+							
+							<li class="ome-promt ome-top-small">昵称</li>
+							<li>
+								<input class="ome-input-style-common ome-width-border-hundred" placeholder="请输入昵称" required="required" />
+							</li>
+							
+							<li class="ome-promt ome-top-small">注册地</li>
+							<li>
+								<input class="ome-input-style-common ome-width-border-hundred" placeholder="请输入注册地" required="required" />
+							</li>
+							
+							<li class="ome-promt ome-top-small">新手机号码</li>
+							<li>
+								<input class="ome-input-style-common ome-width-border-hundred" placeholder="请输入新手机号码" required="required" />
+							</li>
+							<li class="ome-promt ome-top-small">验证码</li>
+							<li class="input-button-box">
+								<input class="ome-input-style-common ome-width-sixty" placeholder="请输入手机验证码" required="required" />
+								<button class="ome-button-style-common btn-error ome-width-thirty" type="button">发送验证码</button>
+							</li>
+							
+							<li class="ome-top-small">
+								<button class="ome-button-style-common btn-primary ome-width-hundred" type="submit">授权并申诉</button>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+
+		</section>
+
+		<footer>
+			<ul class="ome-footer-title">
+				<li><a href="javascript:void(0)">关于我们</a></li>
+				<li><a href="javascript:void(0)">合作伙伴</a></li>
+				<li><a href="javascript:void(0)">商务合作</a></li>
+				<li><a href="javascript:void(0)">联系我们</a></li>
+				<li><a href="javascript:void(0)">加入我们</a></li>
+				<li><a href="javascript:void(0)">服务声明</a></li>
+			</ul>
+			<ul class="ome-footer-usonline">
+				<li>
+					<img class="usonline-icon usonline-wb" src="img/common/icon/ome.icon.wb.png" />
+				</li>
+				<li>
+					<img class="usonline-icon usonline-wx" src="img/common/icon/ome.icon.wx.png" />
+				</li>
+				<li>
+					<img class="usonline-icon  usonline-twitter" src="img/common/icon/ome.icon.twitter.png" />
+				</li>
+			</ul>
+			<p>©2016 留学家 All rights reserved | 京ICP备15000232</p>
+			<p>©2016 Liuxuejia.com All rights reserved</p>
+		</footer>
+
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/ome.style.1.0.js"></script>
+</html>

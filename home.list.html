@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>与纽约有关的学生公寓-留学家-LiuXueJia</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/common/icon/ome.icon.linklogo.png">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" />-->
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/ome.style.css" />
+		<link rel="stylesheet" href="css/ome.style.dif.css" />
+		<link rel="stylesheet" href="css/ocss/jquery.nstSlider.css" />
+	</head>
+
+	<body>
+
+		<header>
+			<nav>
+				<div class="ome-logo"></div>
+				<ul class="ome-menu">
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：未登录成功时的界面
+                    -->
+					<!--<li class="ome-head-img">
+                    	<img class="ome-nologin-img" src="img/common/icon/icon-nologin.png" />
+                    	登录
+                    </li>
+					<li>注册</li>
+					<li>帮助</li>   -->
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：登录成功后的代码
+                    -->
+					<li class="ome-head-img" onclick="OmeOpenUserPanel(this)" data-status="0">
+						<img src="img/common/modify/head.jpg" /> 大大怪小将军
+					</li>
+					<div class="ome-user-info" id="ome_user_info">
+						<li><a href="javascript:void(0)">个人中心</a></li>
+						<li>我的钱包</li>
+						<li>我的订单</li>
+						<li>我的收藏</li>
+						<li>我的房源</li>
+						<li>帮助</li>
+						<li>退出</li>
+					</div>
+				</ul>
+				<div class="ome-head-search">
+					<input placeholder="您想去哪里找留学生公寓呢？" onkeyup="javascript:OmeOpenSearchMind(this)" />
+					<button></button>
+					<div class="ome-search-mind" id="ome_head_search_mind">
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-noting">抱歉，没有搜索结果，请重新输入</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-city">城市</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约</li>
+							<li>头部北京</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-school">学校</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约大学</li>
+							<li>头部北京大学</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="ome-showmenu">
+					<li onclick="javascript:OmeOpenMenu()">≡</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="ome-container">
+			<div class="home-head-title" align="center">
+				<div class="ome-width-eighty">
+					<h1>纽约的学生公寓</h1>
+					<p>为你找到超过25个留学生公寓，至少11340个床位</p>
+				</div>
+			</div>
+			<div class="ome-noshaow-style-container ome-width-container">
+				<div class="ome-lot-box ome-width-thirty" align="center">
+					<ul class="ome-ul-form ome-col-gray ome-width-eighty">
+						<h1 class="ome-online-title no-label">
+									<font>查找条件</font>
+								</h1>
+						<li class="ome-promt ome-top-bigsmall">选择大学查看附近公寓</li>
+						<li>
+							<div class="ome-select-style-common ome-width-border-hundred">
+								<input class="ome-input-style-common" readonly="readonly" placeholder="请选择大学" required="required">
+								<label></label>
+								<ul class="ome-select-ul ome-width-border-hundred">
+									<li>纽约大学</li>
+									<li>纽约大学</li>
+								</ul>
+							</div>
+						</li>
+						<li class="ome-promt ome-top-bigsmall">价格区间</li>
+						<li class="list-nstslider">
+								<dl class="ome-col-2 ome-width-border-hundred">
+									<dt class="leftLabel"></dt>
+									<dt class="rightLabel"></dt>
+								</dl>
+								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="10" data-cur_max="90">
+									<div class="highlightPanel"></div>
+									<div class="bar"></div>
+									<div class="leftGrip"></div>
+									<div class="rightGrip"></div>
+								</div>
+						</li>
+
+						<li class="ome-promt ome-top-bigsmall">入住时间</li>
+						<li>
+							<input class="ome-input-style-common ome-width-border-hundred" onclick="MyWdatePicker(this)" placeholder="请选择入住时间" required="required">
+						</li>
+
+						<li class="ome-promt ome-top-bigsmall">房型</li>
+						<li>
+							<dl class="ome-style-dl ome-col-3 ome-width-border-hundred">
+								<dt class="active">所有房型</dt>
+								<dt>公寓</dt>
+								<dt>独栋洋房</dt>
+								<dt>学生公寓</dt>
+								<dt>外国民居</dt>
+								<dt>整套出租</dt>
+							</dl>
+						</li>
+
+						<li class="ome-promt ome-top-bigsmall">户型</li>
+						<li>
+							<dl class="ome-style-dl ome-col-3 ome-width-border-hundred">
+								<dt class="active">所有户型</dt>
+								<dt>单人间</dt>
+								<dt>大床房</dt>
+								<dt>独立卫浴</dt>
+							</dl>
+						</li>
+
+						<li class="ome-promt ome-top-bigsmall">人气</li>
+						<li>
+							<dl class="ome-style-dl ome-col-1 ome-width-border-hundred home-popularity">
+								<a href="javascript:alert(1)"><dt><img src="img/common/modify/伦敦.jpg">
+									<div class="popularity-content">
+										<p class="popularity-title">Taior Lofts</p>
+										<p class="popularity-price">US$810起</p>
+									</div>
+								</dt></a>
+								<dt><img src="img/common/modify/波士顿.jpg">
+									<div class="popularity-content">
+										<p class="popularity-title">The Automatic Lofts</p>
+										<p class="popularity-price">US$920起</p>
+									</div>
+								</dt>
+								<dt><img src="img/common/modify/纽约.jpg">
+									<div class="popularity-content">
+										<p class="popularity-title">5300 S Drexel</p>
+										<p class="popularity-price">US$810起</p>
+									</div>
+								</dt>
+								<dt><img src="img/common/modify/悉尼.jpg">
+									<div class="popularity-content">
+										<p class="popularity-title">Taior Lofts</p>
+										<p class="popularity-price">US$810起</p>
+									</div>
+								</dt>
+							</dl>
+						</li>
+					</ul>
+					</div>
+					<div class="ome-rob-box ome-width-boder-seventy">
+						<ul class="home-switch">
+							<li class="active">按受欢迎度从高到底</li>
+							<li>按价格从高到底</li>
+						</ul>
+						<ul class="ome-ul-line ome-width-hundred home-search-result">
+							<li class='icon-noting'>对不起，没找到任何和纽约有关的住房</li>
+							<li>
+								<div class="home-search-box">
+									<img class="homes-img" src="img/common/modify/temp.jpg">
+									<div class="homes-content">
+										<h1 class="ome-online-title">
+											<font>Arc at Old Colony</font>
+											<label>(纽约)</label>
+										</h1>
+										<div class="homes-relevant">
+											<img class="landlord-head" src="img/common/modify/head.jpg" />
+											<font class="landlord-name" title="发布房东">大大怪小将军</font>
+											<font class="landlord-release-time" title="发布时间">2016/04/29</font>
+											<font class="user-comment" title="用户评论数">12</font>
+											<font class="user-shouc" title="用户收藏数">12</font>
+										</div>
+										<div class="homes-relevant">
+											<font class="buy-price"><b>$810</b>起每月</font>
+										</div>
+										<div class="homes-relevant">
+											<label class="homes-text-label btn-error">停车场</label>
+											<label class="homes-text-label btn-primary">健身房</label>
+											<label class="homes-text-label btn-waring">地铁站</label>
+											<button class="ome-button-style-common btn-primary">查看房型</button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="home-search-box">
+									<img class="homes-img" src="img/common/modify/temp.jpg">
+									<div class="homes-content">
+										<h1 class="ome-online-title">
+											<font>Arc at Old Colony</font>
+											<label>(纽约)</label>
+										</h1>
+										<div class="homes-relevant">
+											<img class="landlord-head" src="img/common/modify/head.jpg" />
+											<font class="landlord-name" title="发布房东">大大怪小将军</font>
+											<font class="landlord-release-time" title="发布时间">2016/04/29</font>
+											<font class="user-comment" title="用户评论数">12</font>
+											<font class="user-shouc" title="用户收藏数">12</font>
+										</div>
+										<div class="homes-relevant">
+											<font class="buy-price"><b>$810</b>起每月</font>
+										</div>
+										<div class="homes-relevant">
+											<label class="homes-text-label btn-waring">停车场</label>
+											<label class="homes-text-label btn-error">健身房</label>
+											<label class="homes-text-label btn-primary">地铁站</label>
+											<button class="ome-button-style-common btn-primary">查看房型</button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="home-search-box">
+									<img class="homes-img" src="img/common/modify/temp.jpg">
+									<div class="homes-content">
+										<h1 class="ome-online-title">
+											<font>Arc at Old Colony</font>
+											<label>(纽约)</label>
+										</h1>
+										<div class="homes-relevant">
+											<img class="landlord-head" src="img/common/modify/head.jpg" />
+											<font class="landlord-name" title="发布房东">大大怪小将军</font>
+											<font class="landlord-release-time" title="发布时间">2016/04/29</font>
+											<font class="user-comment" title="用户评论数">12</font>
+											<font class="user-shouc" title="用户收藏数">12</font>
+										</div>
+										<div class="homes-relevant">
+											<font class="buy-price"><b>$810</b>起每月</font>
+										</div>
+										<div class="homes-relevant">
+											<label class="homes-text-label btn-error">停车场</label>
+											<label class="homes-text-label btn-primary">健身房</label>
+											<label class="homes-text-label btn-waring">地铁站</label>
+											<button class="ome-button-style-common btn-primary">查看房型</button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="home-search-box">
+									<img class="homes-img" src="img/common/modify/temp.jpg">
+									<div class="homes-content">
+										<h1 class="ome-online-title">
+											<font>Arc at Old Colony</font>
+											<label>(纽约)</label>
+										</h1>
+										<div class="homes-relevant">
+											<img class="landlord-head" src="img/common/modify/head.jpg" />
+											<font class="landlord-name" title="发布房东">大大怪小将军</font>
+											<font class="landlord-release-time" title="发布时间">2016/04/29</font>
+											<font class="user-comment" title="用户评论数">12</font>
+											<font class="user-shouc" title="用户收藏数">12</font>
+										</div>
+										<div class="homes-relevant">
+											<font class="buy-price"><b>$810</b>起每月</font>
+										</div>
+										<div class="homes-relevant">
+											<label class="homes-text-label btn-primary">停车场</label>
+											<label class="homes-text-label btn-waring">健身房</label>
+											<label class="homes-text-label btn-error">地铁站</label>
+											<button class="ome-button-style-common btn-primary">查看房型</button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="home-search-box">
+									<img class="homes-img" src="img/common/modify/temp.jpg">
+									<div class="homes-content">
+										<h1 class="ome-online-title">
+											<font>Arc at Old Colony</font>
+											<label>(纽约)</label>
+										</h1>
+										<div class="homes-relevant">
+											<img class="landlord-head" src="img/common/modify/head.jpg" />
+											<font class="landlord-name" title="发布房东">大大怪小将军</font>
+											<font class="landlord-release-time" title="发布时间">2016/04/29</font>
+											<font class="user-comment" title="用户评论数">12</font>
+											<font class="user-shouc" title="用户收藏数">12</font>
+										</div>
+										<div class="homes-relevant">
+											<font class="buy-price"><b>$810</b>起每月</font>
+										</div>
+										<div class="homes-relevant">
+											<label class="homes-text-label btn-error">停车场</label>
+											<label class="homes-text-label btn-primary">健身房</label>
+											<label class="homes-text-label btn-waring">地铁站</label>
+											<button class="ome-button-style-common btn-primary">查看房型</button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="home-search-box">
+									<img class="homes-img" src="img/common/modify/temp.jpg">
+									<div class="homes-content">
+										<h1 class="ome-online-title">
+											<font>Arc at Old Colony</font>
+											<label>(纽约)</label>
+										</h1>
+										<div class="homes-relevant">
+											<img class="landlord-head" src="img/common/modify/head.jpg" />
+											<font class="landlord-name" title="发布房东">大大怪小将军</font>
+											<font class="landlord-release-time" title="发布时间">2016/04/29</font>
+											<font class="user-comment" title="用户评论数">12</font>
+											<font class="user-shouc" title="用户收藏数">12</font>
+										</div>
+										<div class="homes-relevant">
+											<font class="buy-price"><b>$810</b>起每月</font>
+										</div>
+										<div class="homes-relevant">
+											<label class="homes-text-label btn-error">停车场</label>
+											<label class="homes-text-label btn-primary">健身房</label>
+											<label class="homes-text-label btn-waring">地铁站</label>
+											<button class="ome-button-style-common btn-primary">查看房型</button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="home-result-move">加载更多</li>
+						</ul>
+					</div>
+				</div>
+		</section>
+
+		<footer>
+			<ul class="ome-footer-title">
+				<li><a href="javascript:void(0)">关于我们</a></li>
+				<li><a href="javascript:void(0)">合作伙伴</a></li>
+				<li><a href="javascript:void(0)">商务合作</a></li>
+				<li><a href="javascript:void(0)">联系我们</a></li>
+				<li><a href="javascript:void(0)">加入我们</a></li>
+				<li><a href="javascript:void(0)">服务声明</a></li>
+			</ul>
+			<ul class="ome-footer-usonline">
+				<li>
+					<img class="usonline-icon usonline-wb" src="img/common/icon/ome.icon.wb.png" />
+				</li>
+				<li>
+					<img class="usonline-icon usonline-wx" src="img/common/icon/ome.icon.wx.png" />
+				</li>
+				<li>
+					<img class="usonline-icon  usonline-twitter" src="img/common/icon/ome.icon.twitter.png" />
+				</li>
+			</ul>
+			<p>©2016 留学家 All rights reserved | 京ICP备15000232</p>
+			<p>©2016 Liuxuejia.com All rights reserved</p>
+		</footer>
+
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/ome.style.1.0.js"></script>
+	<script type="text/javascript" src="js/home.list.js"></script>
+	<script type="text/javascript" src="js/WdatePicker.js"></script>
+	<script type="text/javascript" src="js/ojs/jquery.nstSlider.js"></script>
+	<script>
+		$('.nstSlider').nstSlider({
+			"left_grip_selector": ".leftGrip",
+			"right_grip_selector": ".rightGrip",
+			"value_bar_selector": ".bar",
+			"value_changed_callback": function(cause, leftValue, rightValue) {
+				$('.leftLabel').text("最小价格:"+leftValue);
+				$('.rightLabel').text("最大价格:"+rightValue);
+			},
+		});
+		var highlightMin = Math.random() * 20,
+			highlightMax = highlightMin + Math.random() * 80;
+		$('.nstSlider').nstSlider('highlight_range', highlightMin, highlightMax);
+	</script>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人中心-大大怪小将军-留学家-LiuXueJia</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../img/common/icon/ome.icon.linklogo.png">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/ome.style.css" />
+		<link rel="stylesheet" href="../css/ome.style.dif.css" />
+	</head>
+	<body>
+		
+		<header>
+			<nav>
+				<div class="ome-logo"></div>
+				<ul class="ome-menu">
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：未登录成功时的界面
+                    -->
+                    <!--<li class="ome-head-img">
+                    	<img class="ome-nologin-img" src="img/common/icon/icon-nologin.png" />
+                    	登录
+                    </li>
+					<li>注册</li>
+					<li>帮助</li>   -->
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：登录成功后的代码
+                    -->
+					<li class="ome-head-img" onclick="OmeOpenUserPanel(this)" data-status="0">
+						<img  src="../img/common/modify/head.jpg" />
+						大大怪小将军
+					</li>
+					<div class="ome-user-info" id="ome_user_info">
+						<li><a href="javascript:void(0)">个人中心</a></li>
+						<li>我的钱包</li>
+						<li>我的订单</li>
+						<li>我的收藏</li>
+						<li>我的房源</li>
+						<li>帮助</li>
+						<li>退出</li>
+					</div>
+				</ul>
+				<div class="ome-head-search">
+					<input placeholder="您想去哪里找留学生公寓呢？" onkeyup="javascript:OmeOpenSearchMind(this)" />
+					<button></button>
+					<div class="ome-search-mind" id="ome_head_search_mind">
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-noting">抱歉，没有搜索结果，请重新输入</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-city">城市</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约</li>
+							<li>头部北京</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-school">学校</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约大学</li>
+							<li>头部北京大学</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="ome-showmenu">
+					<li onclick="javascript:OmeOpenMenu()">≡</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section class="ome-container">
+			<!--
+            	作者：18273446017@163.com
+            	时间：2016-04-18
+            	描述：这里的设计思路是  样式用一个容器，宽度由于要响应式 所以用另一个容器
+            -->
+			<div class="ome-style-container ome-width-container">
+				<div class="user-head-box">
+					<img class="user-face ome-top-common" src="../img/common/modify/head.jpg" />
+					<input type="file" class="user-face-update" title="点击修改头像"/>
+					<h1 class="user-name ome-top-bigsmall">大大怪小将军</h1>
+					<p class="user-one" contenteditable="true" onblur="javascript:alert(1)">介绍一下你自己吧！</p>
+				</div>
+				
+				<div class="user-info-box">
+					<div class="user-info-box-container">
+					<div class="ome-div ome-width-hundred" align="center" style="padding-bottom: 2em;">
+						<form class="ome-form">
+							<ul class="ome-ul-form ome-col-gray">
+								<h1 class="ome-online-title">
+									<font>基本信息</font>
+								</h1>
+								<li class="ome-promt ome-top-bigsmall">昵称</li>
+								<li>
+								<input class="ome-input-style-common ome-width-sixty" value="大大怪小将军" placeholder="请输入用户名" required="required"  />
+								</li>
+								
+								<li class="ome-promt ome-top-bigsmall">性别</li>
+								<li>
+									<div class="ome-select-style-common ome-width-sixty">
+										<input class="ome-input-style-common" readonly="readonly" placeholder="请选择性别">
+										<input class="ome-input-style-common" readonly="readonly" type="hidden" required="required">
+										<label></label>
+										<ul class="ome-select-ul ome-width-sixty">
+											<li data-key='1'>男</li>
+											<li data-key='2'>女</li>
+										</ul>
+									</div>
+								</li>
+								
+								<li class="ome-promt ome-top-bigsmall">留学国家</li>
+								<li>
+									<div class="ome-select-style-common ome-width-sixty">
+										<input class="ome-input-style-common" readonly="readonly" placeholder="请选择留学国家" required="required">
+										<label></label>
+										<ul class="ome-select-ul ome-width-sixty">
+											<li data-key='1'>美国</li>
+											<li data-key='2'>韩国</li>
+											<li data-key='3'>日本</li>
+											<li data-key='4'>比利时</li>
+											<li data-key='5'>瑞士</li>
+											<li>留学热门国家收集</li>
+										</ul>
+									</div>
+								</li>
+								
+								<li class="ome-promt ome-top-bigsmall">邮箱</li>
+								<li class="input-button-box">
+									<input class="ome-input-style-common ome-width-sixty" placeholder="请输入邮箱地址" required="required" />
+									<button class="ome-button-style-common btn-error" type="button">发送验证邮件</button>
+								</li>
+								
+								<li class="ome-promt ome-top-bigsmall">手机</li>
+								<li class="input-button-box">
+									<input class="ome-input-style-common ome-width-sixty" placeholder="请输入手机号码" value="+86 182****1009" readonly="readonly" />
+									<a href="user.changephone.html" target="_blank"><button class="ome-button-style-common btn-error" type="button">
+											更改手机
+									</button></a>
+								</li>
+								
+								<h1 class="ome-online-title ome-top-common">
+									<font>偏好设置</font>
+									<label>(告诉我们你的个人偏好，我们会按照你的要求，尽力为你寻找合适的室友)</label>
+								</h1>
+								
+								<li class="ome-promt ome-top-bigsmall">是否合租</li>
+								<li>
+									<div class="ome-select-style-common ome-width-border-hundred">
+										<input class="ome-input-style-common" readonly="readonly" placeholder="请选择是否合租" required="required">
+										<label></label>
+										<ul class="ome-select-ul ome-width-border-hundred">
+											<li>是</li>
+											<li>否</li>
+										</ul>
+									</div>
+								</li>
+								
+								<li class="ome-promt ome-top-bigsmall">室友偏好</li>
+								<li>
+									<div class="ome-select-style-common ome-width-border-hundred">
+										<input class="ome-input-style-common" readonly="readonly" placeholder="请选择室友偏好" required="required">
+										<label></label>
+										<ul class="ome-select-ul ome-width-border-hundred">
+											<li>没有特别偏好</li>
+											<li>喜欢男女混住</li>
+											<li>只想和男生住</li>
+											<li>只想和女生住</li>
+										</ul>
+									</div>
+								</li>
+								
+								<li class="ome-promt ome-top-bigsmall">是否吸烟</li>
+								<li>
+									<div class="ome-select-style-common ome-width-border-hundred">
+										<input class="ome-input-style-common" readonly="readonly" placeholder="请选择是否吸烟" required="required">
+										<label></label>
+										<ul class="ome-select-ul ome-width-border-hundred">
+											<li>是</li>
+											<li>否</li>
+										</ul>
+									</div>
+								</li>
+								
+								
+								<h1 class="ome-online-title ome-top-common">
+									<font>安全设置</font>
+									<label>(完善您的安全设置，防止被打扰)</label>
+								</h1>
+								
+								<li class="ome-promt ome-top-bigsmall">是否对外显示手机号码</li>
+								<li>
+									<div class="ome-select-style-common ome-width-border-hundred">
+										<input class="ome-input-style-common" readonly="readonly" placeholder="请选择是否对外显示手机号码" required="required">
+										<label></label>
+										<ul class="ome-select-ul ome-width-border-hundred">
+											<li>是</li>
+											<li>否</li>
+										</ul>
+									</div>
+								</li>
+								
+								<li class="ome-promt ome-top-bigsmall">是否接收留言</li>
+								<li>
+									<div class="ome-select-style-common ome-width-border-hundred">
+										<input class="ome-input-style-common" readonly="readonly" placeholder="请选择是否接收私信" required="required">
+										<label></label>
+										<ul class="ome-select-ul ome-width-border-hundred">
+											<li>是</li>
+											<li>否</li>
+										</ul>
+									</div>
+								</li>
+								
+								<li class="ome-promt ome-top-bigsmall">密码修改</li>
+								<li>
+									<input type="password" class="ome-input-style-common ome-width-sixty" placeholder="请输入密码" required="required" />
+								</li>
+								<li class="input-button-box">
+									<input type="password" class="ome-input-style-common ome-width-sixty" placeholder="请再次输入密码" required="required" />
+									<button class="ome-button-style-common btn-error ome-width-thirty" type="button">确认修改</button>
+								</li>
+								
+								
+								<li class="ome-top-bigsmall">
+									<button class="ome-button-style-common btn-primary ome-width-border-hundred" type="submit">提交修改</button>
+								</li>
+							</ul>
+						</form>
+					</div>
+					
+					
+					
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="ome-style-container ome-width-container" style="background:#F1F1F1;">
+				<div class="user-menu-warp">
+					<ul class="ome-ul-line menu-warp">
+						<li class="icon-xtxx active" onclick="javascript:SwitchSystemMessage(this)">系统消息</li>
+						<li class="icon-sx" onclick="javascript:SwitchUserMessage(this)">留言</li>
+					</ul>
+				</div>
+				<div class="user-content-warp">
+					
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-22
+                    	描述：系统消息显示
+                    -->
+					<ul class='ome-ul-line ome-title-content' id="system_message">
+						
+						 <!--
+                                                        没有系统系统消息的时候显示  下同
+                         --> 
+						<!--<li class='icon-noting'>暂时没有任何系统消息</li>-->  
+                                                                       
+						<li class="ome-message-read">
+							<h1>留学家在某某地方举行什么什么活动<label>2016-04-22 10:47</label></h1>
+							<p>内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充
+							内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充
+							内容填充内容填充内容填充内容填充内容填充内容填充</p>
+							<div class="ome-message-operation">
+								<a href="javascript:void(0)" class="icon-del" title="删除"></a>
+								<a href="javascript:void(0)" class="icon-read" title="标记已读"></a>
+								<a href="javascript:void(0)" class="icon-unread" title="标记未读"></a>
+							</div>
+						</li>
+						<li class="ome-message-unread">
+							<h1>留学家在某某地方举行什么什么活动<label>2016-04-22 10:47</label></h1>
+							<p>内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充
+							内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充
+							内容填充内容填充内容填充内容填充内容填充内容填充</p>
+							<div class="ome-message-operation">
+								<a href="javascript:void(0)" class="icon-del" title="删除"></a>
+								<a href="javascript:void(0)" class="icon-read" title="标记已读"></a>
+								<a href="javascript:void(0)" class="icon-unread" title="标记未读"></a>
+							</div>
+						</li>
+						<li class="ome-message-unread">
+							<h1>留学家在某某地方举行什么什么活动<label>2016-04-22 10:47</label></h1>
+							<p>内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充
+							内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充
+							内容填充内容填充内容填充内容填充内容填充内容填充</p>
+							<div class="ome-message-operation">
+								<a href="javascript:void(0)" class="icon-del" title="删除"></a>
+								<a href="javascript:void(0)" class="icon-read" title="标记已读"></a>
+								<a href="javascript:void(0)" class="icon-unread" title="标记未读"></a>
+							</div>
+						</li>
+					</ul>
+					
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-22
+                    	描述：留言显示样式
+                    -->
+					<ul class='ome-ul-line ome-title-content user-title-content' id="user_message" style="display: none;">
+						<!--<li class='icon-noting'>暂时没有任何留言</li>-->
+						<li class="ome-message-read">
+							<h1>孙兰东</h1>
+							<div class="user-other-message">
+								<a href="javascript:alert('跳转到用户孙兰东的个人主页')"><img src="../img/common/modify/index.page.1.jpg" /></a>
+								<div class="message-content">
+								      <font>你好</font>
+									<label>2016-04-22 10:47</label>
+								</div>
+							</div>
+							<div class="user-my-message">
+								<img src="../img/common/modify/head.jpg" />
+								<div class="message-content">
+								      <font>你是谁？</font>
+									<label>2016-04-22 10:47</label>
+								</div>
+							</div>
+							<div class="ome-message-operation">
+								<a href="javascript:void(0)" class="icon-del" title="删除"></a>
+								<a href="javascript:void(0)" class="icon-read" title="标记已读"></a>
+								<a href="javascript:void(0)" class="icon-unread" title="标记未读"></a>
+							</div>
+							<form class="ome-form">
+								<input class="ome-input-style-common ome-width-seventy" style="float: left;" placeholder="请输入回复内容" required="required" />
+								<button class="ome-button-style-common btn-error ome-width-twenty ome-left-common" type="submit" style="float: left;">回复</button>
+							</form>
+						</li>
+						<li class="ome-message-unread">
+							<h1>who am i<label>2016-04-22 10:47</label></h1>
+							<div class="user-other-message">
+								<a href="javascript:alert('跳转到用户who am i的个人主页')"><img src="../img/common/modify/伦敦.jpg" /></a>
+								<div class="message-content">
+								      <font>内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充
+							内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充
+							内容填充内容填充内容填充内容填充内容填充内容填充</font>
+									<label>2016-04-22 10:47</label>
+								</div>
+							</div>
+							
+							<div class="ome-message-operation">
+								<a href="javascript:void(0)" class="icon-del" title="删除"></a>
+								<a href="javascript:void(0)" class="icon-read" title="标记已读"></a>
+								<a href="javascript:void(0)" class="icon-unread" title="标记未读"></a>
+							</div>
+							<form class="ome-form">
+								<input class="ome-input-style-common ome-width-seventy" style="float: left;" placeholder="请输入回复内容" required="required" />
+								<button class="ome-button-style-common btn-error ome-width-twenty ome-left-common" type="submit" style="float: left;">回复</button>
+							</form>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		
+		<footer>
+			<ul class="ome-footer-title">
+					<li><a href="javascript:void(0)">关于我们</a></li>
+					<li><a href="javascript:void(0)">合作伙伴</a></li>
+					<li><a href="javascript:void(0)">商务合作</a></li>
+					<li><a href="javascript:void(0)">联系我们</a></li>
+					<li><a href="javascript:void(0)">加入我们</a></li>
+					<li><a href="javascript:void(0)">服务声明</a></li>
+			</ul>
+			<ul class="ome-footer-usonline">
+				<li>
+					<img class="usonline-icon usonline-wb" src="../img/common/icon/ome.icon.wb.png" />
+				</li>
+				<li>
+					<img class="usonline-icon usonline-wx" src="../img/common/icon/ome.icon.wx.png" />
+				</li>
+				<li>
+					<img class="usonline-icon  usonline-twitter" src="../img/common/icon/ome.icon.twitter.png" />
+				</li>
+			</ul>
+			<p>©2016 留学家 All rights reserved | 京ICP备15000232</p>
+			<p>©2016 Liuxuejia.com All rights reserved</p>
+		</footer>
+		
+	</body>
+	
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../js/ome.style.1.0.js"></script>
+	<script type="text/javascript" src="../js/ome.user.home.js" ></script>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>房源发布-留学家-LiuXueJia</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../img/common/icon/ome.icon.linklogo.png">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" />-->
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/ome.style.css" />
+		<link rel="stylesheet" href="../css/ome.style.dif.css" />
+	</head>
+
+	<body>
+
+		<header>
+			<nav>
+				<div class="ome-logo"></div>
+				<ul class="ome-menu">
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：未登录成功时的界面
+                    -->
+					<!--<li class="ome-head-img">
+                    	<img class="ome-nologin-img" src="img/common/icon/icon-nologin.png" />
+                    	登录
+                    </li>
+					<li>注册</li>
+					<li>帮助</li>   -->
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：登录成功后的代码
+                    -->
+					<li class="ome-head-img" onclick="OmeOpenUserPanel(this)" data-status="0">
+						<img src="../img/common/modify/head.jpg" /> 大大怪小将军
+					</li>
+					<div class="ome-user-info" id="ome_user_info">
+						<li><a href="javascript:void(0)">个人中心</a></li>
+						<li>我的钱包</li>
+						<li>我的订单</li>
+						<li>我的收藏</li>
+						<li>我的房源</li>
+						<li>帮助</li>
+						<li>退出</li>
+					</div>
+				</ul>
+				<div class="ome-head-search">
+					<input placeholder="您想去哪里找留学生公寓呢？" onkeyup="javascript:OmeOpenSearchMind(this)" />
+					<button></button>
+					<div class="ome-search-mind" id="ome_head_search_mind">
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-noting">抱歉，没有搜索结果，请重新输入</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-city">城市</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约</li>
+							<li>头部北京</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-school">学校</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约大学</li>
+							<li>头部北京大学</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="ome-showmenu">
+					<li onclick="javascript:OmeOpenMenu()">≡</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="ome-container">
+			<div class="ome-noshaow-style-container ome-width-container">
+				<h1 class="ome-online-title no-label">
+						<font>发布房源信息</font>
+				</h1>
+			</div>
+
+			<div class="ome-noshaow-style-container ome-width-container" style="background:#F1F1F1;">
+				<div class="user-menu-warp">
+					<ul class="ome-ul-line menu-warp">
+						<li class="active" onclick="javascript:SwitchPanel(0)">基本信息</li>
+						<li onclick="javascript:SwitchPanel(1)">详情描述</li>
+						<li onclick="javascript:SwitchPanel(2)">房源图片</li>
+						<li onclick="javascript:SwitchPanel(3)">便利设施</li>
+						<li onclick="javascript:SwitchPanel(4)">预定价格</li>
+						<li onclick="javascript:SwitchPanel(5)">租期说明</li>
+					</ul>
+				</div>
+				<div class="user-content-warp urh-content-minheight" align="center">
+					<form class="ome-form ome-width-eighty">
+						<ul class="ome-ul-form ome-col-gray">
+							<li class="ome-promt-big ome-top-small">关于房源<b class="ome-col-red">*</b></li>
+							<li class="ome-promt ome-top-small">出租类型</li>
+							<li class="bl-radio">
+								<dl class="ome-col-3 ome-width-border-hundred">
+									<dt><input name="czlx" type="radio" checked="checked" value="" /><font class="icon-zhzu">整租</font></dt>
+									<dt><input name="czlx" type="radio" value="" /><font class="icon-hezu">合租</font></dt>
+								</dl>
+							</li>
+
+							<li class="ome-promt ome-top-small">房源类型</li>
+							<li class="bl-radio">
+								<dl class="ome-col-3 ome-width-border-hundred">
+								 <dt><input name="fylx" type="radio" checked="checked" value="" /><font class="icon-gy">公寓</font> </dt>
+								 <dt><input name="fylx" type="radio" value="" /><font class="icon-biesh">别墅</font> </dt>
+								 <dt><input name="fylx" type="radio" value="" /><font class="icon-qita">其它</font> </dt>
+								</dl>
+							</li>
+							<li class="ome-promt ome-top-small">租期类型</li>
+							<li class="bl-radio ome-style-hr">
+								<dl class="ome-col-3 ome-width-border-hundred">
+								<dt><input name="zqlx" type="radio" checked="checked" value="" /><font class="icon-long">长租</font></dt>
+								<dt><input name="zqlx" type="radio" value="" /><font class="icon-short">短租</font></dt>
+								</dl>
+							</li>
+
+							<li class="ome-promt-big ome-top-small">房间类型<b class="ome-col-red">*</b></li>
+							
+							<li class="urh-li-2 ome-top-small">
+								<font>卧室数量</font>
+								<div class="ome-select-style-common ome-width-thirty">
+									<input class="ome-input-style-common" readonly="readonly" placeholder="请选择卧室数量">
+									<input class="ome-input-style-common" readonly="readonly" type="hidden" required="required">
+									<label></label>
+									<ul class="ome-select-ul ome-width-thirty">
+										<li data-key='1'>1</li>
+										<li data-key='2'>2</li>
+										<li data-key='2'>2+</li>
+									</ul>
+								</div>
+								<font class="ome-left-small">卫浴数量</font>
+								<div class="ome-select-style-common ome-width-thirty">
+									<input class="ome-input-style-common" readonly="readonly" placeholder="请选择卫浴数量">
+									<input class="ome-input-style-common" readonly="readonly" type="hidden" required="required">
+									<label></label>
+									<ul class="ome-select-ul ome-width-thirty">
+										<li data-key='1'>1</li>
+										<li data-key='2'>2</li>
+										<li data-key='2'>2+</li>
+									</ul>
+								</div>
+							</li>
+								
+							<li class="urh-li-2 ome-top-small">
+								<font>车位数量</font>
+								<div class="ome-select-style-common ome-width-thirty">
+									<input class="ome-input-style-common" readonly="readonly" placeholder="请选择车位数量">
+									<input class="ome-input-style-common" readonly="readonly" type="hidden" required="required">
+									<label></label>
+									<ul class="ome-select-ul ome-width-thirty">
+										<li data-key='1'>1</li>
+										<li data-key='2'>2</li>
+										<li data-key='2'>2+</li>
+									</ul>
+								</div>
+								<font class="ome-left-small">可住人数</font>
+								<div class="ome-select-style-common ome-width-thirty">
+									<input class="ome-input-style-common" readonly="readonly" placeholder="请选择可住人数">
+									<input class="ome-input-style-common" readonly="readonly" type="hidden" required="required">
+									<label></label>
+									<ul class="ome-select-ul ome-width-thirty">
+										<li data-key='1'>1</li>
+										<li data-key='2'>2</li>
+										<li data-key='2'>2+</li>
+									</ul>
+								</div>
+							</li>
+							
+							<li class="ome-top-bigsmall">
+								<button class="ome-button-style-common btn-waring ome-width-thirty" type="button">返回</button>
+								<button class="ome-button-style-common btn-error ome-width-thirty ome-left-common" type="submit">下一步</button>
+							</li>
+
+						</ul>
+					</form>
+				
+					<form class="ome-form ome-width-eighty" style="display: none;">
+						<ul class="ome-ul-form ome-col-gray">
+							<li class="ome-promt-big ome-top-small">位置信息<b class="ome-col-red">*</b></li>
+							<li class="urh-li-2 ome-top-small">
+								<font>所在国家</font>
+								<div class="ome-select-style-common ome-width-thirty">
+									<input class="ome-input-style-common" readonly="readonly" placeholder="所在国家">
+									<input class="ome-input-style-common" readonly="readonly" type="hidden" required="required">
+									<label></label>
+									<ul class="ome-select-ul ome-width-thirty">
+										<li data-key='1'>美国</li>
+										<li data-key='2'>英国</li>
+										<li data-key='2'>加拿大</li>
+										<li data-key='2'>加拿大</li>
+										<li data-key='2'>加拿大</li>
+									</ul>
+								</div>
+								<font class="ome-left-common">所在城市</font>
+								<input class="ome-input-style-common ome-width-thirty" placeholder="所在城市" required="required">
+							</li>
+								
+							<li class="urh-li-2 ome-top-bigsmall">
+								<font>附件学校</font>
+								<input class="ome-input-style-common ome-width-thirty" placeholder="附件学校" required="required">
+							</li>
+							<li class="ome-promt ome-top-small">具体地址</li>
+							<li>
+								<input class="ome-input-style-common ome-width-border-hundred" placeholder="具体地址" required="required">
+							</li>
+							
+							<li class="ome-promt ome-top-bigsmall">邮政编码</li>
+							<li class="ome-style-hr">
+								<input class="ome-input-style-common ome-width-thirty" placeholder="邮政编码" required="required">
+							</li>
+							
+							
+							<li class="ome-promt-big ome-top-common">房源信息<b class="ome-col-red">*</b></li>
+							<li class="ome-promt ome-top-small">房源名称</li>
+							<li>
+								<input class="ome-input-style-common ome-width-border-hundred" placeholder="给你的房源起一个响亮的名称" required="required">
+							</li>
+							<li class="ome-promt">房源描述        (您还可以输入<b class="ome-col-red">200</b>个字)</li>
+							<li class="urh-textarea">
+								<textarea placeholder="请输入评论内容" required="required" class="ome-textarea-style-common ome-width-border-hundred"></textarea>
+							</li>
+							<li class="ome-top-bigsmall">
+								<button class="ome-button-style-common btn-waring ome-width-thirty" type="button">返回</button>
+								<button class="ome-button-style-common btn-error ome-width-thirty ome-left-common" type="submit">下一步</button>
+							</li>
+							
+						</ul>
+					</form>
+					
+					<form class="ome-form ome-width-eighty" style="display: none;">
+						<ul class="ome-ul-form ome-col-gray">
+							<li class="ome-promt-big ome-top-small">漂亮的照片能让您的房子脱颖而出<b class="ome-col-red">*</b></li>
+							<li class="ome-promt ome-top-small noellispsis ome-style-hr">支持jpg/png格式，大小控制在5M以内；请尽量提供不少于3张的房屋室内照片（如卧室、客厅、厨房、浴室等），为了保证房屋展示的美观性，图片尺寸请尽量达到800*500（像素）</li>
+							<li class="bl-addphoto" id="bl_addphoto">
+									<div class="bl-photo">
+										<h1>
+										   <font>$@~2Z(`H@NYSJ_E]SM0R2KK.jpg</font>
+										   <a href="javascript:void(0)" class="icon-del" title="删除"></a>
+										</h1>
+										<img src="../img/common/modify/index.page.1.jpg" />
+									</div>
+									<div class="bl-photo">
+										<h1>
+										   <font>$@~2Z(`H@NYSJ_E]SM0R2KK.jpg</font>
+										   <a href="javascript:void(0)" class="icon-del" title="删除"></a>
+										</h1>
+										<img src="../img/common/modify/temp.jpg" />
+									</div>
+							</li>
+							
+							<li class="bl-addphoto">
+								<div class="bl-file">
+									<font>添加图片</font>
+									<input type="file" id="file" class="user-face-update" title="点击添加图片"/>
+								</div>
+							</li>	
+							
+								<li class="ome-top-bigsmall">
+								<button class="ome-button-style-common btn-waring ome-width-thirty" type="button">返回</button>
+								<button class="ome-button-style-common btn-error ome-width-thirty ome-left-common" type="submit">下一步</button>
+							</li>
+						</ul>
+					</form>
+				
+					<form class="ome-form ome-width-eighty" style="display: none;">
+						<ul class="ome-ul-form ome-col-gray">
+							<li class="ome-promt-big ome-top-small">基础设施<b class="ome-col-red">*</b></li>
+							
+							<li class="bl-radio">
+								<dl class="ome-col-4 ome-width-border-hundred">
+									<dt><input type="checkbox" value="" /><font>洗衣机</font></dt>
+									<dt><input type="checkbox" value="" /><font>厨房</font></dt>
+									<dt><input type="checkbox" value="" /><font>餐厅</font></dt>
+									<dt><input type="checkbox" value="" /><font>暖气</font></dt>
+									<dt><input type="checkbox" value="" /><font>Wi-Fi</font></dt>
+									<dt><input type="checkbox" value="" /><font>门禁系统</font></dt>
+								</dl>
+							</li>
+							
+							<li class="ome-promt-big ome-top-small">其它设施<b class="ome-col-red">*</b></li>
+							<li class="bl-radio">
+								<dl class="ome-col-4 ome-width-border-hundred">
+									<dt><input type="checkbox" value="" /><font>健身房</font></dt>
+									<dt><input type="checkbox" value="" /><font>空调</font></dt>
+									<dt><input type="checkbox" value="" /><font>允许养宠物</font></dt>
+									<dt><input type="checkbox" value="" /><font>地下室</font></dt>
+									<dt><input type="checkbox" value="" /><font>游泳池</font></dt>
+									<dt><input type="checkbox" value="" /><font>衣帽间</font></dt>
+									<dt><input type="checkbox" value="" /><font>有线网络</font></dt>
+									<dt><input type="checkbox" value="" /><font>娱乐中心</font></dt>
+									<dt><input type="checkbox" value="" /><font>学习室</font></dt>
+									<dt><input type="checkbox" value="" /><font>露台</font></dt>
+									<dt><input type="checkbox" value="" /><font>电视</font></dt>
+									<dt><input type="checkbox" value="" /><font>花园</font></dt>
+									<dt><input type="checkbox" value="" /><font>电脑</font></dt>
+								</dl>
+							</li>
+							<li class="ome-top-bigsmall">
+								<button class="ome-button-style-common btn-waring ome-width-thirty" type="button">返回</button>
+								<button class="ome-button-style-common btn-error ome-width-thirty ome-left-common" type="submit">下一步</button>
+							</li>
+						</ul>
+					</form>
+				
+					<form class="ome-form ome-width-eighty" style="display: none;">
+						<ul class="ome-ul-form ome-col-gray">
+							<li class="ome-promt-big ome-top-small">住宿价格<b class="ome-col-red">*</b></li>
+							<li class="ome-promt ome-top-small">月租价</li>
+							<li>
+								<input class="ome-input-style-common ome-width-thirty" type="number" placeholder="e.g.500" required="required">
+							</li>
+							<li class="ome-top-bigsmall">
+								<button class="ome-button-style-common btn-waring ome-width-thirty" type="button">返回</button>
+								<button class="ome-button-style-common btn-error ome-width-thirty ome-left-common" type="submit">下一步</button>
+							</li>
+						</ul>
+					</form>
+				
+					<form class="ome-form ome-width-eighty" style="display: none;">
+						<ul class="ome-ul-form ome-col-gray">
+							<li class="ome-promt-big ome-top-small">让租客知道他们可以预订哪些日期<b class="ome-col-red">*</b></li>
+							<li class="bl-radio ome-style-hr">
+								<dl class="ome-col-1 ome-width-border-hundred">
+									<dt><input name="ydsj" type="radio" checked="checked" value="" /><font>目前闲置，可以随时出租</font></dt>
+									<dt><input name="ydsj" type="radio" value="" /><font>有固定的可租日期</font></dt>
+								</dl>
+							</li>
+								
+							<li class="ome-top-bigsmall">
+								<font class="ome-color-3">入住日期</font>
+								<input class="ome-input-style-common ome-width-seventy" onclick="MyWdatePicker(this)" placeholder="请选择入住日期" required="required">
+							</li>
+							<li>
+								<font class="ome-color-3">退房日期</font>
+								<input class="ome-input-style-common ome-width-seventy" onclick="MyWdatePicker(this)" placeholder="请选择退房日期" required="required">
+							</li>
+							<li class="ome-promt">没有确定的退房日期，退房日期可不选</li>
+							
+							<li class="ome-promt-big ome-top-small">备注</li>
+							<li class="ome-promt">
+								(您还可以输入<b class="ome-col-red">200</b>个字)
+							</li>
+							<li class="urh-textarea">
+								<textarea placeholder="请输入备注内容" required="required" class="ome-textarea-style-common ome-width-border-hundred"></textarea>
+							</li>
+							<li class="ome-top-bigsmall">
+								<button class="ome-button-style-common btn-waring ome-width-thirty" type="button">返回</button>
+								<button class="ome-button-style-common btn-error ome-width-thirty ome-left-common" type="submit">确定发布</button>
+							</li>
+							
+						</ul>
+					</form>
+				</div>
+
+		</section>
+
+		<footer>
+			<ul class="ome-footer-title">
+				<li><a href="javascript:void(0)">关于我们</a></li>
+				<li><a href="javascript:void(0)">合作伙伴</a></li>
+				<li><a href="javascript:void(0)">商务合作</a></li>
+				<li><a href="javascript:void(0)">联系我们</a></li>
+				<li><a href="javascript:void(0)">加入我们</a></li>
+				<li><a href="javascript:void(0)">服务声明</a></li>
+			</ul>
+			<ul class="ome-footer-usonline">
+				<li>
+					<img class="usonline-icon usonline-wb" src="../img/common/icon/ome.icon.wb.png" />
+				</li>
+				<li>
+					<img class="usonline-icon usonline-wx" src="../img/common/icon/ome.icon.wx.png" />
+				</li>
+				<li>
+					<img class="usonline-icon  usonline-twitter" src="../img/common/icon/ome.icon.twitter.png" />
+				</li>
+			</ul>
+			<p>©2016 留学家 All rights reserved | 京ICP备15000232</p>
+			<p>©2016 Liuxuejia.com All rights reserved</p>
+		</footer>
+
+		<div class="ome-overlap" <!--style="display: block;"-->>
+		</div>
+		<div class="ome-prompt-box ome-confirm-box" <!--style="display: block;"-->>
+			<h1 class="confirm-title">房东认证</h1>
+			<p class="confirm-content">您还未通过认证成为房东，请先认证！</p>
+			<div class="confirm-button">
+				<a href="user.become.landlord.html">
+					<button class="ome-button-style-common btn-primary ome-width-thirty" type="button">
+					前往认证
+				</button>
+				</a>
+			</div>
+		</div>
+		<div class="ome-prompt-box ome-confirm-box" id="ome_del_photo">
+			<h1 class="confirm-title">删除照片</h1>
+			<p class="confirm-content">你确定删除这张照片吗</p>
+			<div class="confirm-button">
+				<button class="ome-button-style-common btn-primary ome-width-thirty" onclick="confirmClose()" type="button">取消</button>
+				<button class="ome-button-style-common btn-error ome-width-thirty" onclick="confirmDel()" type="button">确认</button>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../js/ome.style.1.0.js"></script>
+	<script type="text/javascript" src="../js/WdatePicker.js" ></script>
+	<script src="../js/ome.add.photo.js" type="text/javascript"></script> 
+	<script type="text/javascript" src="../js/user.release.house.js" ></script>
+</html>

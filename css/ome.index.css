@@ -1,0 +1,41 @@
+/*
+ * 由于index界面的头部有一个搜索大框，不需要头部的搜索框了 针对此项对index界面的样式稍作调整
+ */
+header{
+	-webkit-transition: background-color 0.2s ease-out;
+	-o-transition: background-color 0.2s ease-out;
+	-moz-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
+	background-color: rgba(37, 37, 53, .5);
+}
+.header-active {
+	background-color: #252535;
+}
+/*屏幕最小为500*/
+@media screen and (min-width: 768px) {
+	header .ome-head-search {
+		display: none;
+		height: auto;
+		margin-top: 14px;
+		margin-right: 20px;
+	}
+	.ome-head-search button {
+		height: 32px;
+	}
+}
+@media screen and (min-width : 450px) and (max-width : 768px) {
+	header .ome-head-search {
+		display: none;
+		height: auto;
+		margin-top: 12px;
+		margin-right: 20px;
+	}
+	.ome-head-search button {
+		height: 28px;
+	}
+}
+@media screen and (max-width : 450px) {
+	header .ome-head-search {
+		display: none !important;
+	}
+}

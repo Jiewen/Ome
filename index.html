@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>留学家-LiuXueJia-你身边的留学平台</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/common/icon/ome.icon.linklogo.png">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/ome.style.css" />
+		<link rel="stylesheet" href="css/ome.style.dif.css" />
+		<link rel="stylesheet" href="css/ome.index.css" />
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<div class="ome-logo"></div>
+				<ul class="ome-menu">
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：未登录成功时的界面
+                    -->
+					<a href="login.html">
+						<li class="ome-head-img">
+							<img class="ome-nologin-img" src="img/common/icon/icon-nologin.png" /> 登录
+						</li>
+					</a>
+					<a href="reg.html">
+						<li>注册</li>
+					</a>
+					<li>帮助</li>
+					<!--
+                    	作者：18273446017@163.com
+                    	时间：2016-04-11
+                    	描述：登录成功后的代码
+                    -->
+					<li class="ome-head-img" onclick="OmeOpenUserPanel(this)" data-status="0">
+						<img src="img/common/modify/head.jpg" /> 大大怪小将军
+					</li>
+					<div class="ome-user-info" id="ome_user_info">
+						<a href="user/user.home.html">
+							<li>个人中心</li>
+						</a>
+						<a href="user/user.money.html">
+							<li>我的钱包</li>
+						</a>
+						<a href="user/user.order.html">
+							<li>我的订单</li>
+						</a>
+						<li>我的收藏</li>
+						<li>我的房源</li>
+						<li>帮助</li>
+						<li>退出</li>
+					</div>
+				</ul>
+				<div class="ome-head-search">
+					<input placeholder="您想去哪里找留学生公寓呢？" onkeyup="javascript:OmeOpenSearchMind(this)" />
+					<button></button>
+					<div class="ome-search-mind" id="ome_head_search_mind">
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-noting">抱歉，没有搜索结果，请重新输入</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-city">城市</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约</li>
+							<li>头部北京</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-head">
+							<li class="icon-school">学校</li>
+						</ul>
+						<ul class="ome-ul-line ome-col-red ome-search-mind-content">
+							<li>头部纽约大学</li>
+							<li>头部北京大学</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="ome-showmenu">
+					<li onclick="javascript:OmeOpenMenu()">≡</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="ome-jumbotron">
+			<h1>你身边的留学平台</h1>
+			<p>寻找属于你的留学生公寓</p>
+			<div class="ome-jumbotron-input-bg">
+				<input class="ome-index-search-input" onfocus="javascript:OmeOpenSearch()" onkeyup="javascript:OmeOpenResult(this)" placeholder="您想去哪里找留学生公寓？" />
+				<button class="ome-index-search-btn btn-primary">GO</button>
+				<!--
+            	作者：18273446017@163.com
+            	时间：2016-04-06
+            	描述：电脑面板采用方式
+            -->
+				<div class="ome-index-search-compu">
+					<ul class="ome-index-search-compu-head" data-index="0">
+						<li class="active" onclick="javascript:OmeChangeSearchshow(0,this)">搜索历史</li>
+						<li onclick="javascript:OmeChangeSearchshow(1,this)">大家都在搜</li>
+					</ul>
+					<div class="ome-index-search-compu-hos">
+						<ul class="ome-ul">
+							<li>孙兰东</li>
+							<li>大是范德萨发盛大</li>
+							<li>孙兰东</li>
+							<li>大是范德萨发盛大</li>
+							<li>孙兰东</li>
+							<li>大是范德萨发盛大</li>
+						</ul>
+					</div>
+					<div class="ome-index-search-compu-alls">
+						<ul class="ome-ul">
+							<li>孙兰东</li>
+							<li>大是范德萨发盛大</li>
+							<li>孙兰东</li>
+							<li>大是范德萨发盛大</li>
+							<li>孙兰东</li>
+							<li>大是范德萨发盛大</li>
+						</ul>
+					</div>
+				</div>
+				<!--
+                	作者：18273446017@163.com
+                	时间：2016-04-07
+                	描述：输入字体之后的联想面板
+                -->
+				<div class="ome-search-mind" id="ome_index_search_mind" style="box-shadow:none;">
+					<ul class="ome-ul-big-line ome-col-red ome-search-mind-head">
+						<li class="icon-noting">抱歉，没有搜索结果，请重新输入</li>
+					</ul>
+
+					<ul class="ome-ul-big-line ome-col-red ome-search-mind-head">
+						<li class="icon-city">城市</li>
+					</ul>
+					<ul class="ome-ul-big-line ome-col-red ome-search-mind-content">
+						<li>纽约</li>
+						<li>北京</li>
+					</ul>
+					<ul class="ome-ul-big-line ome-col-red ome-search-mind-head">
+						<li class="icon-school">学校</li>
+					</ul>
+					<ul class="ome-ul-big-line ome-col-red ome-search-mind-content">
+						<li>纽约大学</li>
+						<li>北京大学</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</section>
+		<div class="ome-index-tran-png" align="center">
+			<img src="img/common/icon/ome.icon.tran.png" />
+		</div>
+		<section class="ome-index-container">
+			<h1>搜索城市或大学名查看附近所有学生公寓</h1>
+			<p>300座城市，1500多个学生公寓</p>
+			<h4>热门城市推荐<a href="#" class="ome-left-common">更多》》</a></h4>
+			<ul>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/伦敦.jpg" width="100%" height="100%" />
+						<h2>伦敦</h2>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/波士顿.jpg" width="100%" height="100%" />
+						<h2>波士顿</h2>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/纽约.jpg" width="100%" height="100%" />
+						<h2>纽约</h2>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/悉尼.jpg" width="100%" height="100%" />
+						<h2>悉尼</h2>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/纽约.jpg" width="100%" height="100%" />
+						<h2>纽约</h2>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/悉尼.jpg" width="100%" height="100%" />
+						<h2>悉尼</h2>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<section class="ome-index-intro ome-top-common">
+			<ul>
+				<li>
+					<img src="img/common/icon/iconfont-chengshidingwei.png" />
+					<h1>300 座城市</h1>
+					<p>学生公寓遍布全球，涵盖英美澳等热门留学国家的300个主要城市</p>
+				</li>
+				<li>
+					<img src="img/common/icon/iconfont-xuexiaozixun.png" />
+					<h1>800所学校</h1>
+					<p>大学周边的学生公寓，地理位置优越，交通便利，开启美好留学生活</p>
+				</li>
+				<li>
+					<img src="img/common/icon/icon-gy.png" />
+					<h1>15000栋公寓</h1>
+					<p>你他妈自己去找文案，组织词汇</p>
+				</li>
+				<li>
+					<img src="img/common/icon/icon-bed.png" />
+					<h1>700,000张床位</h1>
+					<p>从独卫单间到多人套房，房型多样，选择丰富，家具电器一应俱全</p>
+				</li>
+
+			</ul>
+		</section>
+		<section class="ome-index-container">
+			<h4 class="ome-top-common">热门大学推荐<a href="#" class="ome-left-common">更多》》</a></h4>
+			<ul>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/伦敦.jpg" width="100%" height="100%" />
+						<h2>伦敦大学</h2>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/波士顿.jpg" width="100%" height="100%" />
+						<h2>伦敦大学</h2>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/纽约.jpg" width="100%" height="100%" />
+						<h2>伦敦大学</h2>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/悉尼.jpg" width="100%" height="100%" />
+						<h2>伦敦大学</h2>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/纽约.jpg" width="100%" height="100%" />
+						<h2>伦敦大学</h2>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/悉尼.jpg" width="100%" height="100%" />
+						<h2>伦敦大学</h2>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<section class="ome-index-lanner ome-top-common">
+			<a href="javascript:OmeLannerLeftPage()" class="arrL"></a>
+			<a href="javascript:OmeLannerRightPage()" class="arrR"></a>
+			<ul id="ome_lanner" data-index="0">
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/lanner.3.jpg" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/lanner.2.jpg" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/lanner.1.jpg" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/lanner.3.jpg" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/lanner.2.jpg" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<img src="img/common/modify/lanner.1.jpg" />
+					</a>
+				</li>
+			</ul>
+			<div class="lanner-sequence" align="center">
+				<a href="javascript:OmeLannerMoveTo(0)" class="active"></a>
+				<a href="javascript:OmeLannerMoveTo(1)"></a>
+				<a href="javascript:OmeLannerMoveTo(2)"></a>
+				<a href="javascript:OmeLannerMoveTo(3)"></a>
+				<a href="javascript:OmeLannerMoveTo(4)"></a>
+				<a href="javascript:OmeLannerMoveTo(5)"></a>
+			</div>
+		</section>
+		<section class="ome-index-intro">
+			<h2>我们比您更关心您的安全</h2>
+			<p class="ome-text-p">安全是您海外的美好生活的基础，国家有界限，安全和信任无界限</p>
+
+			<ul>
+				<li>
+					<img src="img/common/icon/icon-dp.png" />
+					<h1>家长后盾</h1>
+				</li>
+				<li>
+					<img src="img/common/icon/icon-sfz.png" />
+					<h1>身份安全</h1>
+				</li>
+				<li>
+					<img src="img/common/icon/icon-zf.png" />
+					<h1>无忧在线支付</h1>
+				</li>
+				<li>
+					<img src="img/common/icon/icon-bz.png" />
+					<h1>售后保障</h1>
+				</li>
+			</ul>
+
+		</section>
+
+		<footer>
+			<ul class="ome-footer-title">
+				<li><a href="javascript:void(0)">关于我们</a></li>
+				<li><a href="javascript:void(0)">合作伙伴</a></li>
+				<li><a href="javascript:void(0)">商务合作</a></li>
+				<li><a href="javascript:void(0)">联系我们</a></li>
+				<li><a href="javascript:void(0)">加入我们</a></li>
+				<li><a href="javascript:void(0)">服务声明</a></li>
+			</ul>
+			<ul class="ome-footer-usonline">
+				<li>
+					<img class="usonline-icon usonline-wb" src="img/common/icon/ome.icon.wb.png" />
+				</li>
+				<li>
+					<img class="usonline-icon usonline-wx" src="img/common/icon/ome.icon.wx.png" />
+				</li>
+				<li>
+					<img class="usonline-icon  usonline-twitter" src="img/common/icon/ome.icon.twitter.png" />
+				</li>
+			</ul>
+			<p>©2016 留学家 All rights reserved | 京ICP备15000232</p>
+			<p>©2016 Liuxuejia.com All rights reserved</p>
+		</footer>
+
+		<!--
+        	作者：18273446017@163.com
+        	时间：2016-03-30
+        	描述：小屏中频搜索面板采用方式
+        -->
+		<div class="ome-index-search-phone">
+			<label class="ome-index-search-phone-colse" onclick="javascript:OmeCloseSearch()">×</label>
+			<div class="ome-searchphone-input-bg">
+				<input class="ome-index-search-input ome-input-border" placeholder="您想去哪里找留学生公寓？" />
+				<button class="ome-index-search-btn">GO</button>
+			</div>
+			<div class="ome-index-search-phone-title">
+				<h4>搜索历史<a href="#">更多》》</a></h4>
+				<ul class="ome-ul">
+					<li>孙兰东</li>
+					<li>大是范德萨发盛大</li>
+					<li>孙兰东</li>
+					<li>大是范德萨发盛大</li>
+					<li>孙兰东</li>
+					<li>大是范德萨发盛大</li>
+				</ul>
+			</div>
+			<div class="ome-index-search-phone-title">
+				<h4>大家在搜<a href="#">更多》》</a></h4>
+				<ul class="ome-ul">
+					<li>孙兰东</li>
+					<li>大是范德萨发盛大</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/ome.style.1.0.js"></script>
+	<script type="text/javascript" src="js/ome.index.1.0.js"></script>
+
+</html>
